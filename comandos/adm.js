@@ -17,7 +17,6 @@ module.exports = (msg) =>{
         
         //Puxando a função
         const func = functions[comand]
-        console.log(func)
 
         //Verificando se ele existe
         if(func){
@@ -36,8 +35,8 @@ module.exports = (msg) =>{
 //Mudar o status com o que o dono escrever
 function activity(msg){
     const content = msg.content.substr(15)
-    console.log(content)
     bot.user.setActivity(content)
+    console.log("")
 }
 
 function ajuda(msg){
