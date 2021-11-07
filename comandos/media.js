@@ -6,6 +6,8 @@ module.exports = (msg) =>{
     const valoresA = valoresS.split(", ")
     
     const valoresN = num(valoresA)
+    console.log(valoresN)
+
 
     const conta = soma(valoresN)/valoresN.length
 
@@ -15,7 +17,6 @@ module.exports = (msg) =>{
 
     //console.log(valores)
 }
-
 
 function soma(arr){
     let valor;
@@ -30,10 +31,5 @@ function soma(arr){
 }
 
 function num(arr){
-    const array = []
-    arr.forEach((string) => {
-        const num = Number(string)
-        array.push(num)        
-    })
-    return array
+    return arr.map(value => parseInt(value))
 }
