@@ -54,5 +54,4 @@ function status(msg){
 //online
 //dnd
 //invisible
-//  
 }
