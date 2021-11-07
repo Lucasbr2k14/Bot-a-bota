@@ -5,7 +5,7 @@ const {prefix} = require("../config.json")
 
 bot.on("messageCreate", (msg)=>{   
 
-    if(msg.content == "!msg"){
+    /* if(msg.content == "!msg"){
         const button = new MessageActionRow().addComponents(
             new MessageButton()
             .setLabel("Bem")
@@ -46,8 +46,7 @@ bot.on("messageCreate", (msg)=>{
             })
         })
     }
-
-
+ */
 
     //Filtros
     if(!msg.guild) return  
