@@ -36,7 +36,6 @@ module.exports = (msg) =>{
 function activity(msg){
     const content = msg.content.substr(15)
     bot.user.setActivity(content)
-    console.log("")
 }
 
 function ajuda(msg){

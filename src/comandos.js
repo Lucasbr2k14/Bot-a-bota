@@ -1,9 +1,9 @@
 const {bot} = require("./client.js")
 const {MessageActionRow,MessageButton} = require("discord.js")
 const {prefix} = require("../config.json")
-const client = require("./client.js")
 
-module.exports = bot.on("messageCreate", (msg)=>{   
+
+bot.on("messageCreate", (msg)=>{   
 
     if(msg.content == "!msg"){
         const button = new MessageActionRow().addComponents(
@@ -46,6 +46,8 @@ module.exports = bot.on("messageCreate", (msg)=>{
             })
         })
     }
+
+
 
     //Filtros
     if(!msg.guild) return  
