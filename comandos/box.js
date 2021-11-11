@@ -1,3 +1,5 @@
+const {box, multi} = require("./functions/functions.js")
+
 module.exports = (msg) =>{
     const text = msg.content.substr(5)
 
