@@ -5,8 +5,8 @@ module.exports = (msg) =>{
 
     const numS = msg.content.substr(9)
     const arrS = numS.split(", ")
-    const arrN = num(arrS)
-
+    const arrN = num(arrS).sort()
+    
 
     if(par(arrN.length)){
         
@@ -17,8 +17,8 @@ module.exports = (msg) =>{
         const valor2 = arrN[conta2]
         const res = (valor1+valor2)/2
 
-        msg.channel.send("Valor: " + res)
-
+        console.log(arrN)        
+        msg.channel.send(`Valores: ${arrN} = ${res}`)
 
     }else{
 
