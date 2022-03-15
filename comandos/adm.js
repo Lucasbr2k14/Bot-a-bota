@@ -7,28 +7,32 @@ const functions = {
 
 
 
-module.exports = (msg) =>{
+module.exports = {
+    run(msg){
 
-    //verificando se é o dono do bot
-    if(msg.member.id == "290982797269663745"){
-        
-        //Filtrando só o parametro
-        const comand = msg.content.split(" ")[1]
-        
-        //Puxando a função
-        const func = functions[comand]
+        //verificando se é o dono do bot
+        if(msg.member.id == "290982797269663745"){
+            
+            //Filtrando só o parametro
+            const comand = msg.content.split(" ")[1]
+            
+            //Puxando a função
+            const func = functions[comand]
 
-        //Verificando se ele existe
-        if(func){
-            func(msg)
+            //Verificando se ele existe
+            if(func){
+                func(msg)
+            }else{
+                msg.channel.send("Comando invalido")
+                return 
+            }
+
         }else{
-            msg.channel.send("Comando invalido")
-            return 
+            return
         }
-
-    }else{
-        return
-    }
+    },
+    description:"Para adiministrar o bot",
+    exemple:"adm status online"
 }
 //Criando funções para o adm
 

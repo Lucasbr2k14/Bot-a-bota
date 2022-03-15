@@ -1,6 +1,6 @@
 {
   "name": "bot-a-bota2.0",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Um bote para o discord muito legal com varias funcionalidades",
   "main": "bot.js",
   "scripts": {

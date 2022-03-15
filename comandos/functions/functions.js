@@ -32,4 +32,6 @@ module.exports = {
         const JsonS = JSON.stringify(Json, null, 4)
         return fs.writeFileSync(arquivo, JsonS)
     },
+
+
 }
