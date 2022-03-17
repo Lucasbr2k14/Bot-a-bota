@@ -3,6 +3,8 @@ module.exports = {
     
         if(parameter[1] == "b"){
             msg.channel.send(toBinary(parameter[2]))
+        }else if(parameter[1] == "i"){
+            msg.channel.send(converterInt(parameter[2]))
         }
 
     },
@@ -21,4 +23,26 @@ function toBinary(number){
     return binary
 }
 
+function converterInt(value){
 
+    let number;
+
+    if(typeof value == "string"){
+
+        const bin = value.toString().split("").reverse()
+        const binArr = bin.map(x => parseInt(x))
+        
+        binArr.forEach((value, numberI) =>{
+
+            if(number){
+                number += (2**numberI)*value 
+            }else{
+                number = (2**numberI)*value
+            }
+        
+        })
+    
+        
+    }
+    return number.toString()
+}
