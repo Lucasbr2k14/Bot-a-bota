@@ -1,4 +1,3 @@
-
 module.exports = {
     run(msg){
         const text = msg.content.substr(5)
@@ -23,11 +22,7 @@ function multi(v, s){
     let i;
 
     for(i = 0; i < v; i++){
-        if(valor){
-            valor = valor + s
-        }else{
-            valor = s
-        }
+        valor = valor ? valor = valor + s : valor = s
     }
 
     return valor
